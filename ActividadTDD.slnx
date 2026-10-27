@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="TDDPractica/TDDPractica.csproj" />
+  <Project Path="TDDPrueba/TDDPrueba.csproj" />
+</Solution>
