@@ -22,5 +22,10 @@ namespace TDDPractica
             }
             return resultado;
         }
+
+        public static bool EsContrasenyaValida(string? contrasenya)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
