@@ -6,9 +6,21 @@ namespace TDDPractica
 {
     public static class Funciones
     {
+        private const long ErrorNumeroNegativo = -1;
+
         public static long CalcularFactorial(int n)
         {
-            throw new NotImplementedException();
+            if (n < 0)
+            {
+                return ErrorNumeroNegativo;
+            }
+
+            long resultado = 1;
+            for (int i = 2; i <= n; i++)
+            {
+                resultado *= i;
+            }
+            return resultado;
         }
     }
 }
