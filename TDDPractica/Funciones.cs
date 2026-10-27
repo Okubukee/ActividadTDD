@@ -8,7 +8,21 @@ namespace TDDPractica
     {
         public static long CalcularFactorial(int n)
         {
-            throw new NotImplementedException();
+            if (n < 0)
+            {
+                return -1;
+            }
+            if (n == 0)
+            {
+                return 1;
+            }
+
+            long resultado = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                resultado = resultado * i;
+            }
+            return resultado;
         }
     }
 }
