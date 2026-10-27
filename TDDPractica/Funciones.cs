@@ -7,6 +7,8 @@ namespace TDDPractica
     public static class Funciones
     {
         private const long ErrorNumeroNegativo = -1;
+        private const int LongitudMinima = 8;
+        private const char CaracterObligatorio = '#';
 
         public static long CalcularFactorial(int n)
         {
@@ -25,23 +27,13 @@ namespace TDDPractica
 
         public static bool EsContrasenyaValida(string? contrasenya)
         {
-            if (contrasenya == null)
+            if (string.IsNullOrEmpty(contrasenya))
             {
                 return false;
             }
-            if (contrasenya == "")
-            {
-                return false;
-            }
-            if (contrasenya.Length < 8)
-            {
-                return false;
-            }
-            if (!contrasenya.Contains("#"))
-            {
-                return false;
-            }
-            return true;
+
+            return contrasenya.Length >= LongitudMinima
+                && contrasenya.Contains(CaracterObligatorio);
         }
     }
 }
